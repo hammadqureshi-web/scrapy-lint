@@ -12,6 +12,10 @@ similar with :class:`~scrapy.Selector` and
 :class:`~scrapy.selector.SelectorList` that can be replaced
 :meth:`~scrapy.selector.SelectorList.get`.
 
+``[0].get()`` and ``[0].extract()`` are only reported without arguments, since
+selector getters take none: with arguments they are something else, e.g. an
+lxml element, where ``get()`` reads an attribute.
+
 
 Why is this bad?
 ================
